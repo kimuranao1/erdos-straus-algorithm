@@ -10,4 +10,4 @@ n=4, x=1/3, y=1/2, z=1/6
 ...
 
 
-## 📂 Files - `erdos-straus-algorithm.py` – main algorithm code - `README.md` – this description ## 🛠 Requirements - Python 3.x No external libraries are needed. ## 👤 Author This code was developed by [your name here], based on an original exploration of integer-based solutions to the Erdős–Straus conjecture.
+## 📂 Files - `erdos-straus-algorithm.py` – main algorithm code - `README.md` – this description ## 🛠 Requirements - Python 3.x No external libraries are needed. ## 👤 Author This code was developed by [kimura nao], based on an original exploration of integer-based solutions to the Erdős–Straus conjecture.
