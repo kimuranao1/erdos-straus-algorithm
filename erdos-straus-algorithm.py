@@ -11,46 +11,32 @@ solve = []
 aa = []
 solves = []
 #nはnの値
-#aは分母をどのくらい分解して考えるか？
-for n in range(2,200):
-    for a in range(1,200):
-        d = n*a
-        nn = 4*a
-        sol3 = nn
-        
+#aは4/nをどのくらい倍数に分解して考えるか？
+#ve,ve1,ve2はそれぞれx,y,zの数値となる。
+#無作為にxyzの値を記録していく。
+#生成された全ての組み合わせを、(1 / n) * 4 == (1 / x) + (1 / y) + (1 / z)の公式に合致するか検証する。 
 
 
+for n in range(2,100):
+    for a in range(1,50):
+        for aa2 in range(1,50):
+            for aaa in range(1,50):
+                solve.append(n)
 
-        for i in range(1,sol3):
-                ve = sol3 / i
-                vv = sol3 - i
-                ve = float(ve)
-                vv = float(vv)
-
-                if ve.is_integer() and vv.is_integer():
-                    for k in range(1,(sol3-i)):
-                        ve1 = sol3 / k
-                        ve1 = float(ve1)
-                        if ve1.is_integer():
-                                ve2 = sol3 - i - k
-                                ve2 = float(ve2)
-                                if ve2.is_integer():
-                                        solve.append(n)
-
-                                        solve.append(ve)
-                                        solve.append(ve1)
-                                        solve.append(ve2)
-                                        aa = solve.copy()
-                                        solves.append(solve)
-                                        solve = []
+                solve.append(int(a))
+                solve.append(int(aa2))
+                solve.append(int(aaa))
+                aa = solve.copy()
+                solves.append(solve)
+                solve = []
 
 
 
 for i in solves:
-    n = int(i[0])
-    x = Fraction(1,int(i[1]))
-    y = Fraction(1,int(i[2]))
-    z = Fraction(1,int(i[3]))
+    n = i[0]
+    x = Fraction(1,i[1])
+    y = Fraction(1,i[2])
+    z = Fraction(1,i[3])
     yoi1 = Fraction(4,n)
     a = yoi1
     b = x + y + z
